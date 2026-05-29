@@ -17,17 +17,26 @@
 
 <div class="bill">
 
+<!-- HEADER -->
+
 <div class="header">
 
 <div class="company">
 
 <h1>TOP STAR NAMKEEN</h1>
 
-<p>Mob: 8080454647</p>
+<p><b>Mob:</b> 8080454647</p>
 
-<p>Email: duraisinghnadar@gmail.com</p>
+<p><b>Email:</b> duraisinghnadar@gmail.com</p>
 
-<p>Manufacturing: Gala No.2, A.K Industrial Estate, Ekta Seva Sanstha Society, Vasai Tahashil,Dist.Palghar, Maharashtra- 401208</p>
+<p>
+<b>Manufacturing:</b>
+Gala No.2, A.K Industrial Estate,
+Ekta Seva Sanstha Society,
+Vasai Tahashil,
+Dist. Palghar,
+Maharashtra - 401208
+</p>
 
 </div>
 
@@ -37,37 +46,65 @@
 
 <hr>
 
+<!-- TOP SECTION -->
+
 <div class="top-section">
 
 <div>
+
 <label>Buyer Name</label>
+
 <input type="text" id="buyer">
+
 </div>
 
 <div>
+
 <label>Invoice No</label>
-<input type="text" id="invoice">
+
+<input type="text" id="invoice" readonly>
+
 </div>
 
-
 <div>
+
 <label>Address</label>
+
 <input type="text" id="address">
+
 </div>
 
 <div>
+
 <label>Date</label>
+
 <input type="date" id="date">
+
 </div>
 
 <div>
+
+<label>GST No</label>
+
+<input type="text" value="27AGPN1247B12S" readonly>
+
+</div>
+
+<div>
+
 <label>Phone</label>
+
 <input type="text" id="phone">
+
 </div>
 
 </div>
 
 <hr>
+
+<!-- ADD ITEM SECTION -->
+
+<div class="no-print">
 
 <h3>Add Item</h3>
 
@@ -77,34 +114,59 @@
 
 <select id="item"></select>
 
-<input type="number" id="rate" placeholder="Rate ₹" min="0">
+<input type="number"
+id="rate"
+placeholder="Rate ₹"
+min="0">
 
-<input type="number" id="packets" placeholder="Packets" min="1">
+<input type="number"
+id="packets"
+placeholder="Pkt"
+min="1">
 
 <select id="unit">
 
 <option>1 Kg</option>
+
 <option>Half Kg</option>
 
 </select>
 
-<button onclick="addItem()">Add</button>
+<button onclick="addItem()">
+
+Add
+
+</button>
 
 </div>
 
-<table id="table">
+</div>
+
+<!-- TABLES -->
+
+<div class="tables-container compact-table">
+
+<!-- LEFT TABLE -->
+
+<table class="bill-table" id="table1">
 
 <thead>
 
 <tr>
 
 <th>Sr</th>
-<th>Name</th>
-<th>Packets</th>
+
+<th class="item-name">Name</th>
+
+<th class="pkt-col">Pkt</th>
+
 <th>Unit</th>
+
 <th>Rate</th>
+
 <th>Total</th>
-<th>Delete</th>
+
+<th class="no-print">X</th>
 
 </tr>
 
@@ -116,32 +178,127 @@
 
 </table>
 
-<h2 class="grand">Grand Total ₹ <span id="grand">0</span></h2>
+<!-- RIGHT TABLE -->
 
-<div class="buttons">
+<table class="bill-table" id="table2">
 
-<button onclick="printBill()">Print Bill</button>
+<thead>
 
-<button onclick="downloadPDF()">Download PDF</button>
+<tr>
+
+<th>Sr</th>
+
+<th class="item-name">Name</th>
+
+<th class="pkt-col">Pkt</th>
+
+<th>Unit</th>
+
+<th>Rate</th>
+
+<th>Total</th>
+
+<th class="no-print">X</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- GST SUMMARY -->
+
+<div class="gst-summary">
+
+<p>
+
+Subtotal: ₹
+
+<span id="subtotal">0.00</span>
+
+</p>
+
+<p>
+
+CGST (2.5%): ₹
+
+<span id="cgst">0.00</span>
+
+</p>
+
+<p>
+
+SGST (2.5%): ₹
+
+<span id="sgst">0.00</span>
+
+</p>
+
+<h2>
+
+Final Total ₹
+
+<span id="grand">0.00</span>
+
+</h2>
+
+</div>
+
+<!-- BUTTONS -->
+
+<div class="buttons no-print">
+
+<button onclick="printBill()">
+
+Print Bill
+
+</button>
+
+<button onclick="downloadPDF()">
+
+Download PDF
+
+</button>
 
 </div>
 
 <hr>
 
+<!-- TERMS -->
+
 <h4>Terms & Conditions</h4>
 
 <ol>
 
-<li>Goods once sold & delivered will not be taken back.</li>
+<li>
+Goods once sold & delivered will not be taken back.
+</li>
 
-<li>The Total Amount of the order should be paid at the respective day of delivery.</li>
+<li>
+The Total Amount of the order should be paid at the respective day of delivery — 30% advance and rest at delivery.
+</li>
 
-<li>If there is any complaint that can be considered should be informed within 24 hours from the date of Bill.</li>
+<li>
+If there is any complaint that can be considered should be informed within 24 hours from the date of Bill.
+</li>
 
-<li>This Bill should be signed by an authorised person.</li>
+<li>
+This Bill should be signed by an authorised person.
+</li>
 
-<li>Subject to Mumbai jurisdiction.</li>
+<li>
+Subject to Mumbai jurisdiction.
+</li>
+
 </ol>
+
+<!-- SIGNATURES -->
 
 <div class="signatures">
 
@@ -161,7 +318,12 @@
 
 </div>
 
-<script src="script.js"></script>
+<!-- PRINT SPACE -->
+
+<div class="print-space"></div>
+
+<script defer src="script.js"></script>
 
 </body>
+
 </html>
